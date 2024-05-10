@@ -5,3 +5,16 @@
     background-color: rgb(60, 102, 109);
     color: white;
 }
+
+.logo{
+    margin: 0;
+    padding: 0;
+    width: 3%;
+    height: 10%;
+}
+@media only screen  and (min-device-width:200px) and (max-device-width:1200px){
+    .logo{
+        height: 15%;
+        width: 14%;
+    }
+}
