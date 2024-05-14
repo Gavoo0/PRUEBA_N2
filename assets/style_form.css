@@ -39,3 +39,10 @@
     padding: 30px;
     border-radius: 2%;
 }
+
+#mensajeNombre{
+    color: red;
+    text-align: center;
+    margin-top: 5px;
+    display: none;
+}
