@@ -22,9 +22,20 @@
     margin-top: 5px;
     display: none;
 }
-#mensajeNombre{
+#mensajeContrasena{
     color: red;
     text-align: center;
     margin-top: 5px;
     display: none;
+}
+.container-sm{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 8%;
+}
+
+.form_cont{
+    background-color: white;
+    padding: 30px;
+    border-radius: 2%;
 }
