@@ -1,14 +1,34 @@
-const settings = {
-	async: true,
-	crossDomain: true,
-	url: 'https://local-business-data.p.rapidapi.com/search?query=renta%20de%20bicicletas%2C%20chile&limit=20&lat=37.359428&lng=-121.925337&zoom=13&language=en&region=us',
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c00270a072msh08a3c348819886dp17c445jsnc55e260ddd7d',
-		'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com'
-	}
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<div id="mapa?"></div>
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+
+
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		const settings = {
+			async: true,
+			crossDomain: true,
+			url: 'https://google-maps-api-free.p.rapidapi.com/google-find-place-search?place=Agbamami%20Restaurant',
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '828456b888mshc3c077fbfa3135ep13d105jsn8785f7f76114',
+				'X-RapidAPI-Host': 'google-maps-api-free.p.rapidapi.com'
+			}
+		};
+		
+		$.ajax(settings).done(function (response) {
+			console.log(response);
+			$("#mapa?").append(response.candidates);
+		});
+	</script>
+</body>
+</html>

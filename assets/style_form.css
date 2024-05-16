@@ -46,3 +46,7 @@
     margin-top: 5px;
     display: none;
 }
+
+.formato_titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
