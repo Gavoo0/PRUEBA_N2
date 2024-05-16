@@ -6,14 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style_index.css">
+	<link rel="stylesheet" href="../assets/syle_map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <style>
-        #map {
-            height: 600px;
-            width: 100%;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -87,46 +81,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        function initMap() {
-            const map = L.map('map').setView([-1.286389, 36.817223], 13); // Coordenadas de Nairobi, Kenia
-
-            // Añadir la capa de mapa de OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            // Solicitar datos de BikeWise API
-            $.ajax({
-                url: 'https://bikewise.org:443/api/v2/incidents',
-                data: {
-                    incident_type: 'theft', // Tipo de incidente (robo)
-                    proximity: 'Nairobi, Kenya', // Ubicación de proximidad
-                    proximity_square: 50 // Radio de proximidad en km
-                },
-                success: function(response) {
-                    const incidents = response.incidents;
-                    incidents.forEach(function(incident) {
-                        if (incident.addresses && incident.addresses.length > 0) {
-                            const latitude = incident.addresses[0].latitude;
-                            const longitude = incident.addresses[0].longitude;
-                            if (latitude && longitude) {
-                                const marker = L.marker([latitude, longitude])
-                                    .addTo(map)
-                                    .bindPopup(`<b>${incident.title}</b><br>${incident.description}`);
-                            }
-                        }
-                    });
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error al obtener datos de BikeWise:', error);
-                }
-            });
-        }
-
-        $(document).ready(function() {
-            initMap();
-        });
-    </script>
+    <script src="../assets/mapa.js"></script>
 </body>
 </html>
