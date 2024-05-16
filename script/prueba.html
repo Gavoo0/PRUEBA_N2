@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeWise Incidents Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-	
-<div id="mapa?"></div>
+    <div id="map"></div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        function initMap() {
+            const map = L.map('map').setView([-1.286389, 36.817223], 13); // Coordenadas de Nairobi, Kenia
 
+            // Añadir la capa de mapa de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
+            // Solicitar datos de BikeWise API
+            $.ajax({
+                url: 'https://bikewise.org:443/api/v2/incidents',
+                data: {
+                    incident_type: 'theft', // Tipo de incidente (robo)
+                    proximity: 'Nairobi, Kenya', // Ubicación de proximidad
+                    proximity_square: 50 // Radio de proximidad en km
+                },
+                success: function(response) {
+                    const incidents = response.incidents;
+                    incidents.forEach(function(incident) {
+                        if (incident.addresses && incident.addresses.length > 0) {
+                            const latitude = incident.addresses[0].latitude;
+                            const longitude = incident.addresses[0].longitude;
+                            if (latitude && longitude) {
+                                const marker = L.marker([latitude, longitude])
+                                    .addTo(map)
+                                    .bindPopup(`<b>${incident.title}</b><br>${incident.description}`);
+                            }
+                        }
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error al obtener datos de BikeWise:', error);
+                }
+            });
+        }
 
-	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-	<script>
-		const settings = {
-			async: true,
-			crossDomain: true,
-			url: 'https://google-maps-api-free.p.rapidapi.com/google-find-place-search?place=Agbamami%20Restaurant',
-			method: 'GET',
-			headers: {
-				'X-RapidAPI-Key': '828456b888mshc3c077fbfa3135ep13d105jsn8785f7f76114',
-				'X-RapidAPI-Host': 'google-maps-api-free.p.rapidapi.com'
-			}
-		};
-		
-		$.ajax(settings).done(function (response) {
-			console.log(response);
-			$("#mapa?").append(response.candidates);
-		});
-	</script>
+        $(document).ready(function() {
+            initMap();
+        });
+    </script>
 </body>
 </html>
