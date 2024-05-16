@@ -4,7 +4,13 @@
     border-color: rgba(60, 102, 109, 0.5); /* Color del borde */
     color: white; /* Color del texto */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Formato de letra */
+    
 }
+#boton_1,
+#boton_2,
+#boton_3 {
+    width: 150px; /* Ancho fijo para los botones */
+    height: 40px; /* Altura fija para los botones */}
 
 /* Estilo para botones principales al pasar el mouse */
 #showAllBikes:hover, #boton_1:hover, #boton_2:hover, #boton_3:hover {
