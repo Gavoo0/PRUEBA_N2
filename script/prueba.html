@@ -1,229 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/style_index.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"></script>
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="logo">
-      <img src="../images/logo_bici.avif" alt="" class="img-fluid">
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="btn" href="index.html">INICIO<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="btn" href="reparaciones.html">REPARACIONES</a>
-        </li>
-        <li class="nav-item active">
-          <a class="btn" href="ca.html">CATALOGO</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="btn" href="iniciar_sesion.html">INICIAR SESION</a>
-        </li>
-        <li class="nav-item active">
-          <a class="btn" href="registrarse.html">REGISTRARSE</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!--Separacion-->
-  <br>
-  <div class="container">
-    
-      <!--Montaña-->
-      <div class="col-12">
-        <div class="collapse multi-collapse show" id="multiCollapseExample1">
-          <div class="card card-body">
-            <div class="card-deck">
-              <!-- Tarjeta 1 -->
-              <div class="card">
-                <img src="../images/montana_1.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">BICICLETA CANNONDALE 29 HABIT CRB LT LTD</h5>
-                  <br>
-                  <p class="card-text">$5.999.990</p>
-                </div>
-              </div>
-              <!-- Tarjeta 2 -->
-              <div class="card">
-                <img src="../images/Montana_2.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">BICICLETA CANNONDALE 29 Scalpel Hi-MOD Ultimate</h5>
-                  <br>
-                  <p class="card-text">$10.499.990</p>
-                </div>
-              </div>
-              <!-- Tarjeta 3 -->
-              <div class="card">
-                <img src="../images/Montana_3.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">BICICLETA ARO 29 EVEREST</h5>
-                  <br>
-                  <br>
-                  <p class="card-text">$399.990</p>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="card-deck">
-              <!-- Tarjeta 4 -->
-              <div class="card">
-                <img src="../images/montana_4.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Bicicleta MTB Hiland Pro XT290 Negra
-                    </h5>
-                  
-                  <p class="card-text"> $149.900</p>
-                </div>
-              </div>
-              <!-- Tarjeta 5 -->
-              <div class="card">
-                <img src="../images/Montana_5.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta MTB Trek Marlin 8 Gen 2 Roja</h5>
-                  
-                  <p class="card-text">$899.900 </p>
-                </div>
-              </div>
-              <!-- Tarjeta 6 -->
-              <div class="card">
-                <img src="../images/Montana_6.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta MTB Trek Marlin 4 Gen 2 Azul</h5>
-                  
-                  <p class="card-text"> $449.900 </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--BMX-->
-      <div class="col-12">
-        <div class="collapse multi-collapse show" id="multiCollapseExample2">
-          <div class="card card-body">
-            <div class="card-deck">
-              <!-- Tarjeta 1 -->
-              <div class="card">
-                <img src="../images/bmx_1.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta BMX Kink Whip XL 21.00 Matte Sedona Red </h5>
-                  <br>
-                  <p class="card-text">$429.000</p>
-                </div>
-              </div>
-              <!-- Tarjeta 2 -->
-              <div class="card">
-                <img src="../images/bmx_2.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta BMX Kink Launch 20.25 Gloss Blood Orange</h5>
-                  <br>
-                  <p class="card-text">$339.000</p>
-                </div>
-              </div>
-              <!-- Tarjeta 3 -->
-              <div class="card">
-                <img src="../images/bmx_3.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta BMX Kink Gap 20.5 Gloss Shadow Black</h5>
-                  <br>
-                  <p class="card-text">$399.000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Urbanas-->
-      <div class="col-12">
-        <div class="collapse multi-collapse show" id="multiCollapseExample3">
-          <div class="card card-body">
-            <div class="card-deck">
-              <!-- Tarjeta 1 -->
-              <div class="card">
-                <img src="../images/urbana_1.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana Hiland Full Suspension Plegable 26" Negro</h5>
-                  <br>
-                  <p class="card-text">$479.900</p>
-                </div>
-              </div>
-              <!-- Tarjeta 2 -->
-              <div class="card">
-                <img src="../images/urbana_2.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana R28 Verde</h5>
-                  <br>
-                  <p class="card-text">$145.900</p>
-                </div>
-              </div>
-              <!-- Tarjeta 3 -->
-              <div class="card">
-                <img src="../images/urbana_3.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana Aro 26 Hiland City Classic Negro</h5>
-                  <br>
-                  <p class="card-text">$399.900</p>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="card-deck">
-              <!-- Tarjeta 4 -->
-              <div class="card">
-                <img src="../images/urbana_4.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana Caloi Urbam Fixie/Single Speed 2023</h5>
-                  <br>
-                  <p class="card-text">$199.000</p>
-                </div>
-              </div>
-              <!-- Tarjeta 5 -->
-              <div class="card">
-                <img src="../images/urbana_5.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana Urbana 700c Urbam City Plateado</h5>
-                  <br>
-                  <p class="card-text">$189.000</p>
-                </div>
-              </div>
-              <!-- Tarjeta 6 -->
-              <div class="card">
-                <img src="../images/urbana_6.jpg" class="card-img-top img-fluid" alt="..." height="300px">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta Urbana Urbana 700c Urbam City Negra</h5>
-                  <br>
-                  <p class="card-text">$189.000</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="../assets/catalogo.js"></script>
-</body>
+	
+<div id="mapa?"></div>
 
+
+
+
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		const settings = {
+			async: true,
+			crossDomain: true,
+			url: 'https://google-maps-api-free.p.rapidapi.com/google-find-place-search?place=Agbamami%20Restaurant',
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '828456b888mshc3c077fbfa3135ep13d105jsn8785f7f76114',
+				'X-RapidAPI-Host': 'google-maps-api-free.p.rapidapi.com'
+			}
+		};
+		
+		$.ajax(settings).done(function (response) {
+			console.log(response);
+			$("#mapa?").append(response.candidates);
+		});
+	</script>
+</body>
 </html>

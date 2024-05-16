@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style_index.css">
     <link rel="stylesheet" href="../assets/style_form.css">
-    <link rel="stylesheet" href="../assets/style.css">
 </head>
 </head>
 <body>
 <!-- NAVBA -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="logo">
           <img src="../images/logo_bici.avif" alt="" class="img-fluid">
         </div>  
@@ -41,7 +40,7 @@
             </ul>
           </div>
     </nav>
-<br>
+
 <!-- REPARACIONES -->
 <br>
 <br>
@@ -87,60 +86,36 @@
 </form>
  
 </div>
-<script>
-    document.getElementById('formularioRUT').addEventListener('submit', function(event) {
-        if (!validarRUT()) {
-            event.preventDefault();
-        }
-    });
 
-    function validarRUT() {
-        const rutInput = document.getElementById('RutCliente').value;
-        const mensaje = document.getElementById('mensaje');
 
-        // Limpiar puntos y guion
-        const rut = rutInput.replace(/^0+|[^0-9kK]+/g, '').toUpperCase();
-        if (rut.length < 2) {
-            mensaje.textContent = 'RUT inválido';
-            return false;
-        }
+ 
 
-        const cuerpo = rut.slice(0, -1);
-        const dv = rut.slice(-1);
 
-        // Validar el cuerpo del RUT
-        if (cuerpo.length < 7 || !/^[0-9]+$/.test(cuerpo)) {
-            mensaje.textContent = 'RUT inválido';
-            return false;
-        }
 
-        // Calcular el dígito verificador
-        let suma = 0;
-        let multiplo = 2;
 
-        for (let i = 1; i <= cuerpo.length; i++) {
-            const index = multiplo * cuerpo.charAt(cuerpo.length - i);
-            suma = suma + index;
-            multiplo = multiplo < 7 ? multiplo + 1 : 2;
-        }
+<style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      form {
+          max-width: 400px;
+          margin: 0 auto;
+      }
+      label {
+          display: block;
+          margin-bottom: 5px;
+      }
+      input, textarea {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+      }
+      
+</style>
 
-        const dvEsperado = 11 - (suma % 11);
-        const dvFinal = dvEsperado == 11 ? '0' : dvEsperado == 10 ? 'K' : dvEsperado.toString();
-
-        if (dvFinal !== dv) {
-            mensaje.textContent = 'RUT inválido';
-            return false;
-        }
-
-        mensaje.textContent = '';
-        return true;
-    }
-        // Verificar que ningún campo esté vacío
-        if(RutCliente == ''){
-                        alert('Por favor, completa todos los campos.');
-                        event.preventDefault(); // Evita que se envíe el formulario
-    }
-</script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>

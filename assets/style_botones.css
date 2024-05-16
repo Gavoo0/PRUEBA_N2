@@ -1,69 +1,12 @@
-/* Estilos para los botones dentro del navbar */
-.navbar .btn {
-    color: white;
+/* Estilo para botones principales */
+#showAllBikes, #boton_1, #boton_2, #boton_3 {
+    background-color: rgba(60, 102, 109, 0.5); /* Color semitransparente */
+    border-color: rgba(60, 102, 109, 0.5); /* Color del borde */
+    color: white; /* Color del texto */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Formato de letra */
 }
 
-/* Estilos para los botones del navbar en el estado de hover */
-.navbar .btn:hover {
-    background-color: rgb(60, 102, 109);
-}
-
-/* Estilos para los botones fuera del navbar */
-.btn {
-    color: white;
-    background-color: rgb(60, 102, 109);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 5px;
-    transition: background-color 0.3s;
-}
-
-/* Estilos para los botones fuera del navbar en el estado de hover */
-.btn:hover {
-    background-color: rgb(50, 82, 89);
-}
-
-/* Estilos específicos para el botón "Mostrar todas las bicicletas" */
-#showAllBikes {
-    background-color: rgb(80, 122, 129);
-}
-
-/* Estilos para el logotipo */
-.logo {
-    margin: 0;
-    padding: 0;
-    width: 3%;
-    height: 10%;
-}
-
-@media only screen and (min-device-width:200px) and (max-device-width:1200px) {
-    .logo {
-        height: 15%;
-        width: 14%;
-    }
-}
-
-/* Estilos para los enlaces */
-a {
-    margin-left: 5px !important;
-    color: white;
-}
-
-/* Estilos generales */
-body {
-    background-color: gray;
-}
-
-.container-sm {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 20%;
-}
-
-.form_cont {
-    background-color: white;
-    padding: 30px;
-    border-radius: 2%;
-    padding-top: 10%;
+/* Estilo para botones principales al pasar el mouse */
+#showAllBikes:hover, #boton_1:hover, #boton_2:hover, #boton_3:hover {
+    background-color: rgb(60, 102, 109); /* Color de fondo en el hover */
 }
