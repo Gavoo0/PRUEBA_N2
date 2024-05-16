@@ -28,3 +28,16 @@ body{
 a{
     color: white;
 }
+
+.container-sm{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20%;
+}
+
+.form_cont{
+    background-color: white;
+    padding: 30px;
+    border-radius: 2%;
+    padding-top: 10%;
+}
