@@ -1,21 +1,32 @@
-/* Estilos para los botones */
-.btn {
+/* Estilos para los botones dentro del navbar */
+.navbar .btn {
     color: white;
-    background-color: rgb(60, 102, 109); /* Color de fondo principal */
-    border: none; /* Quitamos el borde */
-    border-radius: 5px; /* Añadimos bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    margin: 5px; /* Margen entre botones */
-    transition: background-color 0.3s; /* Transición suave al pasar el ratón */
 }
 
+/* Estilos para los botones del navbar en el estado de hover */
+.navbar .btn:hover {
+    background-color: rgb(60, 102, 109);
+}
+
+/* Estilos para los botones fuera del navbar */
+.btn {
+    color: white;
+    background-color: rgb(60, 102, 109);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para los botones fuera del navbar en el estado de hover */
 .btn:hover {
-    background-color: rgb(50, 82, 89); /* Cambio de color al pasar el ratón */
+    background-color: rgb(50, 82, 89);
 }
 
 /* Estilos específicos para el botón "Mostrar todas las bicicletas" */
 #showAllBikes {
-    background-color: rgb(80, 122, 129); /* Color de fondo diferente para resaltar */
+    background-color: rgb(80, 122, 129);
 }
 
 /* Estilos para el logotipo */
