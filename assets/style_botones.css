@@ -1,0 +1,58 @@
+/* Estilos para los botones */
+.btn {
+    color: white;
+    background-color: rgb(60, 102, 109); /* Color de fondo principal */
+    border: none; /* Quitamos el borde */
+    border-radius: 5px; /* Añadimos bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 5px; /* Margen entre botones */
+    transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+}
+
+.btn:hover {
+    background-color: rgb(50, 82, 89); /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos específicos para el botón "Mostrar todas las bicicletas" */
+#showAllBikes {
+    background-color: rgb(80, 122, 129); /* Color de fondo diferente para resaltar */
+}
+
+/* Estilos para el logotipo */
+.logo {
+    margin: 0;
+    padding: 0;
+    width: 3%;
+    height: 10%;
+}
+
+@media only screen and (min-device-width:200px) and (max-device-width:1200px) {
+    .logo {
+        height: 15%;
+        width: 14%;
+    }
+}
+
+/* Estilos para los enlaces */
+a {
+    margin-left: 5px !important;
+    color: white;
+}
+
+/* Estilos generales */
+body {
+    background-color: gray;
+}
+
+.container-sm {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20%;
+}
+
+.form_cont {
+    background-color: white;
+    padding: 30px;
+    border-radius: 2%;
+    padding-top: 10%;
+}
