@@ -4,103 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud de Servicio de Reparación</title>
-    <link rel="stylesheet" href="../assets/style_reparacione.css">
-    <link rel="stylesheet" href="../assets/style_index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style_index.css">
+    <link rel="stylesheet" href="../assets/style_reparaciones.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="logo">
-          <img src="../images/logo_bici.avif" alt="" class="img-fluid">
-        </div>  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="btn" href="index.html">INICIO<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="btn" href="reparaciones.html">REPARACIONES</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="btn" href="Catalogo.html">CATALOGO</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="btn" href="iniciar_sesion.html">INICIAR SESIÓN</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="btn" href="registrarse.html">REGISTRARSE</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="logo">
+    <img src="../images/logo_bici.avif" alt="" class="img-fluid">
+  </div>  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="btn" href="index.html">INICIO<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="btn" href="reparaciones.html">REPARACIONES</a>
+        </li>
+        <li class="nav-item active">
+          <a class="btn" href="Catalogo.html">CATALOGO</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="btn" href="iniciar_sesion.html">INICIAR SESION</a>
+        </li>
+        <li class="nav-item active">
+          <a class="btn" href="registrarse.html">REGISTRARSE</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
 <!-- REPARACIONES -->
 <div class="container-sm form_cont">
-    <h1 class="text-center">Solicitud de Servicio de Reparación</h1>
-    <form>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="RutCliente">Rut Cliente</label>
-                <input type="text" class="form-control" id="RutCliente" placeholder="Sin puntos y con guión">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="inputState">Tipo De Servicio</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Mantenciones Generales</option>
-                    <option>Cambio de rueda</option>
-                    <option>Lubricaciones</option>
-                    <option>Cadena</option>
-                    <option>Amortiguadores</option>
-                    <option>Asiento</option>
-                    <option>Pintura</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="fecha">Fecha y Hora:</label>
-                <input type="datetime-local" id="fecha" name="fecha">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="problema">Descripción Específica Del Problema:</label>
-            <textarea id="problema" name="problema" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-    </form>
+  <h1 class="text-center">Solicitud de Servicio de Reparación</h1>
+  <form>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+              <label for="RutCliente">Rut Cliente</label>
+              <input type="text" class="form-control" id="RutCliente" placeholder="Sin puntos y con guión" required>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+              <label for="inputState">Tipo De Servicio</label>
+              <select id="inputState" class="form-control" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Mantenciones Generales">Mantenciones Generales</option>
+                  <option value="Cambio de rueda">Cambio de rueda</option>
+                  <option value="Lubricaciones">Lubricaciones</option>
+                  <option value="Cadena">Cadena</option>
+                  <option value="Amortiguadores">Amortiguadores</option>
+                  <option value="Asiento">Asiento</option>
+                  <option value="Pintura">Pintura</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-12">
+              <label for="fecha">Fecha y Hora:</label>
+              <input type="datetime-local" id="fecha" name="fecha" required>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="problema">Descripción Específica Del Problema:</label>
+          <textarea id="problema" name="problema" rows="4" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+  </form>
 </div>
-<style>
-      
-      body {
-          font-family: Arial, sans-serif;
-      }
-      form {
-          max-width: 400px;
-          margin: 0 auto;
-      }
-      label {
-          display: block;
-          margin-bottom: 5px;
-      }
-      input, textarea {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-      }     
 
-</style>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
