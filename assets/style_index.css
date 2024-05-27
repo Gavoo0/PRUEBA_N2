@@ -12,7 +12,7 @@
     width: 3%;
     height: 10%;
 }
-@media only screen  and (min-device-width:200px) and (max-device-width:1200px){
+@media only screen  and (min-device-width:200px) and (max-device-width:1000px){
     .logo{
         height: 15%;
         width: 14%;
@@ -54,4 +54,26 @@ a{
 
 #div_titulo{
     border-radius: 5%;
+}
+
+#logo_carrito{
+    float: right;
+    margin-right: 5%;
+    width: 5%;
+    height: 10%;
+}
+@media only screen  and (min-device-width:200px) and (max-device-width:1000px){
+    #logo_carrito{
+        height: 15%;
+        width: 14%;
+    }
+}
+#imagen_carrito{
+    background-color: white;
+    padding: 4px;
+    border-radius: 8%;
+    display: none;
+}
+#imagen_carrito:hover{
+    background-color: gray;
 }

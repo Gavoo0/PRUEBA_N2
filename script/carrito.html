@@ -6,10 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style_index.css">
-    <link rel="stylesheet" href="../assets/style_registro.css">
+    <link rel="stylesheet" href="../assets/style_carrito.css">
 </head>
 <body>
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="logo">
           <img src="../images/logo_bici.avif" alt="" class="img-fluid">
@@ -44,49 +43,27 @@
           </div>
         </nav>
         <br>
-        <!-- CONTAINER -->
+
+
         <div class="container">
             <!-- TITULO -->
-            <h3 class="text-center" id="titulo_registro">REGISTRO DE VENTAS</h3>
+            <h3 class="text-center" id="titulo_carrito">REGISTRO DE VENTAS</h3>
             <br>
             <!-- TABLA DE DATOS -->
             <table class="table">
                 <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">Num</th>
+                        <th scope="col">Nombre Producto</th>
+                        <th scope="col">Costo Producto</th>
+                        <th scope="col">Cantidad</th>
+                    </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- FIN TABLA DE DATOS -->
+                <!-- SE INSERTA DE FORMA DINAMICA -->
+                <div id="Contenido_carrito"></div>
+            </table>
+            <!-- FIN TABLA DE DATOS -->
         </div>
-
-
-
-
-
 
 
 
